@@ -55,7 +55,8 @@ public class UserController {
 	// retrieve a specific record
 
 	@GetMapping("/{registerId}")
-	public ResponseEntity<?> getUserById(@PathVariable("registerId") String registerId) throws IdNotFoundException {
+	public ResponseEntity<?> getUserById(@Valid @PathVariable("registerId") String registerId)
+			throws IdNotFoundException {
 		Optional<Register> optional = userService.getUserById(registerId);
 		if (optional.isEmpty()) {
 			Map<String, String> map = new HashMap<String, String>();

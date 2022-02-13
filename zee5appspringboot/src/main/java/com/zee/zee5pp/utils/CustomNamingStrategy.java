@@ -31,10 +31,10 @@ public class CustomNamingStrategy extends PhysicalNamingStrategyStandardImpl {
 		return Identifier.toIdentifier(newName);
 
 	}
-	
+
 	@Override
 	public Identifier toPhysicalColumnName(Identifier name, JdbcEnvironment context) {
-		if(name == null)
+		if (name == null)
 			return null;
 		return Identifier.toIdentifier(name.getText().toLowerCase());
 	}

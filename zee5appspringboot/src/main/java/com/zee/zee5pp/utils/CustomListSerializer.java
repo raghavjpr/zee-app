@@ -9,6 +9,11 @@ import com.zee.zee5app.dto.Login;
 
 public class CustomListSerializer extends StdSerializer<Login> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7460374656837861629L;
+
 	public CustomListSerializer() {
 		// TODO Auto-generated constructor stub
 		this(null);
