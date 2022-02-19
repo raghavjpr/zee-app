@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/zee5appjpa
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: com.zee.zee5pp.utils.CustomNamingStrategy
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+server:
+  port: 9005
+#  servlet:
+#    context-path: /api
+zee5app:
+  app:
+    jwtSecret: secretkey
+    jwtExpirationMs: 86400000
